@@ -22,9 +22,11 @@ export default function PatientsPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
             <Input placeholder="Search patients..." className="pl-9" />
           </div>
-          <Button size="icon" variant="outline">
-            <Plus className="h-4 w-4" />
-          </Button>
+          <Link href="/patients/new">
+            <Button size="icon" variant="outline">
+              <Plus className="h-4 w-4" />
+            </Button>
+          </Link>
         </div>
 
         <div className="space-y-4">

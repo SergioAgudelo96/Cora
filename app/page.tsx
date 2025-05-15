@@ -12,9 +12,14 @@ export default function HomePage() {
             <Activity className="w-6 h-6 text-red-500" />
             <h1 className="text-xl font-bold">CorApp</h1>
           </div>
-          <Button variant="outline" size="sm">
-            Login
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/login">Login</Link>
+            </Button>
+            <Button size="sm" asChild>
+              <Link href="/signup">Sign Up</Link>
+            </Button>
+          </div>
         </div>
       </header>
 
