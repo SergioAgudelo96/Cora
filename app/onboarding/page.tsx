@@ -22,7 +22,7 @@ export default function OnboardingPage() {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1)
     } else {
-      router.push("/")
+      router.push("/dashboard")
     }
   }
 
@@ -33,7 +33,7 @@ export default function OnboardingPage() {
   }
 
   const handleSkip = () => {
-    router.push("/")
+    router.push("/dashboard")
   }
 
   const progress = ((currentStep + 1) / steps.length) * 100
@@ -63,7 +63,7 @@ export default function OnboardingPage() {
         {currentStep === 3 && <PhysicianProfileScreen onNext={handleNext} onBack={handleBack} />}
         {currentStep === 4 && <TutorialScreen onNext={handleNext} onBack={handleBack} />}
         {currentStep === 5 && <DashboardOverviewScreen onNext={handleNext} onBack={handleBack} />}
-        {currentStep === 6 && <CompletionScreen onFinish={() => router.push("/")} onBack={handleBack} />}
+        {currentStep === 6 && <CompletionScreen onFinish={() => router.push("/dashboard")} onBack={handleBack} />}
       </main>
     </div>
   )
